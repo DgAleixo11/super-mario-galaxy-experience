@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { assetPath } from "@/lib/assetPath";
 
 export function HeroSection() {
   const { scrollYProgress } = useScroll();
@@ -16,7 +17,7 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-[#020617] px-6 pt-24">
       <Image
-        src="/assets/images/nebulosa-quad.webp"
+        src={assetPath("/assets/images/nebulosa-quad.webp")}
         alt=""
         fill
         priority
@@ -41,10 +42,16 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          poster="/assets/images/nebulosa-quad.webp"
+          poster={assetPath("/assets/images/nebulosa-quad.webp")}
         >
-          <source src="/assets/videos/planet-3d-alpha.webm" type="video/webm" />
-          <source src="/assets/videos/planet-3d-min.mp4" type="video/mp4" />
+          <source
+            src={assetPath("/assets/videos/planet-3d-alpha.webm")}
+            type="video/webm"
+          />
+          <source
+            src={assetPath("/assets/videos/planet-3d-min.mp4")}
+            type="video/mp4"
+          />
         </video>
 
         <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_35%_25%,rgba(255,255,255,0.22),transparent_28%),linear-gradient(115deg,transparent_0%,transparent_48%,rgba(0,0,0,0.35)_82%)]" />
@@ -63,7 +70,7 @@ export function HeroSection() {
         }}
       >
         <Image
-          src="/assets/images/estrela-min.webp"
+          src={assetPath("/assets/images/estrela-min.webp")}
           alt="Estrela"
           width={90}
           height={90}
@@ -84,7 +91,7 @@ export function HeroSection() {
         }}
       >
         <Image
-          src="/assets/images/luigi.webp"
+          src={assetPath("/assets/images/luigi.webp")}
           alt="Luigi"
           width={170}
           height={240}
@@ -105,7 +112,7 @@ export function HeroSection() {
         }}
       >
         <Image
-          src="/assets/images/rosalina.webp"
+          src={assetPath("/assets/images/rosalina.webp")}
           alt="Rosalina"
           width={155}
           height={240}
@@ -126,7 +133,7 @@ export function HeroSection() {
         }}
       >
         <Image
-          src="/assets/images/yoshi-perso.webp"
+          src={assetPath("/assets/images/yoshi-perso.webp")}
           alt="Yoshi"
           width={150}
           height={220}
@@ -147,7 +154,7 @@ export function HeroSection() {
         }}
       >
         <Image
-          src="/assets/images/peach.webp"
+          src={assetPath("/assets/images/peach.webp")}
           alt="Peach"
           width={145}
           height={230}
@@ -238,14 +245,22 @@ export function HeroSection() {
           >
             <div className="absolute bottom-8 left-1/2 h-32 w-72 -translate-x-1/2 rounded-full bg-blue-500/30 blur-3xl" />
 
-            <Image
-              src="/assets/images/mario-original.webp"
-              alt="Mario"
-              width={520}
-              height={680}
-              priority
+            <video
               className="relative z-10 max-h-[520px] w-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.85)] md:max-h-[680px]"
-            />
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source
+                src={assetPath("/assets/videos/mario-clip-alpha.webm")}
+                type="video/webm"
+              />
+              <source
+                src={assetPath("/assets/videos/mario-clip-min.mp4")}
+                type="video/mp4"
+              />
+            </video>
           </motion.div>
         </motion.div>
       </div>

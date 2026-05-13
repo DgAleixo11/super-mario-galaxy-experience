@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/assetPath";
 
 const characters = [
   {
     name: "Mario",
     role: "Herói principal",
-    image: "/assets/images/mario-original.webp",
+    image: assetPath("/assets/images/mario-original.webp"),
     description:
       "O protagonista da aventura, sempre pronto para atravessar mundos, estrelas e galáxias para salvar o dia.",
     color: "from-red-500/40 to-yellow-400/20",
@@ -17,7 +18,7 @@ const characters = [
   {
     name: "Luigi",
     role: "Herói parceiro",
-    image: "/assets/images/luigi.webp",
+    image: assetPath("/assets/images/luigi.webp"),
     description:
       "Leal, divertido e corajoso, mesmo quando a missão parece grande demais para encarar sozinho.",
     color: "from-green-500/40 to-emerald-300/20",
@@ -27,7 +28,7 @@ const characters = [
   {
     name: "Peach",
     role: "Princesa",
-    image: "/assets/images/peach.webp",
+    image: assetPath("/assets/images/peach.webp"),
     description:
       "Elegante, forte e essencial para a história, trazendo leveza e presença para a jornada.",
     color: "from-pink-400/40 to-rose-300/20",
@@ -37,7 +38,7 @@ const characters = [
   {
     name: "Rosalina",
     role: "Guardiã das estrelas",
-    image: "/assets/images/rosalina.webp",
+    image: assetPath("/assets/images/rosalina.webp"),
     description:
       "Misteriosa e poderosa, conectada aos segredos do universo e à energia das estrelas.",
     color: "from-cyan-400/40 to-blue-500/20",
@@ -47,7 +48,7 @@ const characters = [
   {
     name: "Yoshi",
     role: "Companheiro",
-    image: "/assets/images/yoshi-perso.webp",
+    image: assetPath("/assets/images/yoshi-perso.webp"),
     description:
       "Ágil, carismático e cheio de personalidade, pronto para ajudar em qualquer planeta.",
     color: "from-lime-400/40 to-green-500/20",
@@ -57,7 +58,7 @@ const characters = [
   {
     name: "Bowser Jr.",
     role: "Vilão",
-    image: "/assets/images/bowser-jr.webp",
+    image: assetPath("/assets/images/bowser-jr.webp"),
     description:
       "Pequeno no tamanho, grande no caos. Um rival cheio de truques e energia explosiva.",
     color: "from-orange-500/40 to-red-500/20",

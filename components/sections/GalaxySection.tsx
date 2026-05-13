@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/assetPath";
 
 const galaxies = [
   {
@@ -34,7 +35,7 @@ export function GalaxySection() {
       className="relative overflow-hidden bg-black px-6 py-28"
     >
       <Image
-        src="/assets/images/nebulosa-quad.webp"
+        src={assetPath("/assets/images/nebulosa-quad.webp")}
         alt=""
         fill
         className="object-cover opacity-25"
@@ -49,7 +50,7 @@ export function GalaxySection() {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       >
         <Image
-          src="/assets/images/estrela-min.webp"
+          src={assetPath("/assets/images/estrela-min.webp")}
           alt="Estrela"
           width={95}
           height={95}
@@ -63,7 +64,7 @@ export function GalaxySection() {
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       >
         <Image
-          src="/assets/images/rosalina.webp"
+          src={assetPath("/assets/images/rosalina.webp")}
           alt="Rosalina"
           width={210}
           height={320}
@@ -157,10 +158,14 @@ export function GalaxySection() {
             <motion.div
               className="absolute bottom-[15%] right-[14%]"
               animate={{ y: [0, -18, 0], rotate: [0, 8, 0] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{
+                duration: 5.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             >
               <Image
-                src="/assets/images/estrela-min.webp"
+                src={assetPath("/assets/images/estrela-min.webp")}
                 alt="Estrela"
                 width={80}
                 height={80}

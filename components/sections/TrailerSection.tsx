@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Play, X } from "lucide-react";
+import { assetPath } from "@/lib/assetPath";
 
 export function TrailerSection() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ export function TrailerSection() {
       className="relative overflow-hidden bg-[#050816] px-6 py-28"
     >
       <Image
-        src="/assets/images/nebulosa-quad.webp"
+        src={assetPath("/assets/images/nebulosa-quad.webp")}
         alt=""
         fill
         className="object-cover opacity-25"
@@ -37,7 +38,7 @@ export function TrailerSection() {
         }}
       >
         <Image
-          src="/assets/images/bowser-jr.webp"
+          src={assetPath("/assets/images/bowser-jr.webp")}
           alt="Bowser Jr."
           width={180}
           height={260}
@@ -58,7 +59,7 @@ export function TrailerSection() {
         }}
       >
         <Image
-          src="/assets/images/estrela-min.webp"
+          src={assetPath("/assets/images/estrela-min.webp")}
           alt="Estrela"
           width={95}
           height={95}
