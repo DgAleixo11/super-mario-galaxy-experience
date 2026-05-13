@@ -121,45 +121,13 @@ export function TrailerSection() {
           }}
         >
           <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-[1.75rem] bg-black">
-            <video
-              className="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source
-                src="/assets/videos/mario-clip-alpha.webm"
-                type="video/webm"
-              />
-              <source
-                src="/assets/videos/mario-clip-min.mp4"
-                type="video/mp4"
-              />
-            </video>
+            <img
+              src="https://img.youtube.com/vi/8uaQnl9Bbdw/maxresdefault.jpg"
+              alt="Capa do trailer de Super Mario Galaxy: O Filme"
+              className="absolute inset-0 h-full w-full object-cover opacity-75 transition duration-700 group-hover:scale-105"
+            />
 
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ef444455,transparent_34%),linear-gradient(180deg,transparent_0%,#000_100%)]" />
-
-            <motion.div
-              className="absolute right-[8%] bottom-[8%] hidden md:block"
-              animate={{
-                y: [0, -16, 0],
-                rotate: [0, 4, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <Image
-                src="/assets/images/mario-original.webp"
-                alt="Mario"
-                width={230}
-                height={310}
-                className="drop-shadow-[0_35px_70px_rgba(0,0,0,0.9)]"
-              />
-            </motion.div>
 
             <motion.button
               type="button"
