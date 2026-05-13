@@ -104,7 +104,7 @@ export function TrailerSection() {
               <div className="aspect-video">
                 <iframe
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/wz4IhEteZvs?autoplay=1"
+                  src="https://youtu.be/HRyy_FdyieU?si=AZvsYPMrZK8DKywX"
                   title="Trailer Super Mario Galaxy"
                   allow="autoplay; encrypted-media; picture-in-picture"
                   allowFullScreen
